@@ -12,8 +12,6 @@ final jobs = [
   Job(4, 'CEO', 'Managing managing managers'),
 ];
 
-final sundar = Employee(1, 'Sundar Pachai', jobs[3]);
-
 Future<void> profileDatabase(DatabaseManager db) async {
   await db.setUpDatabase();
   for (final job in jobs) {

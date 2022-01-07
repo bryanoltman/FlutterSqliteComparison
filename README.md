@@ -1,16 +1,13 @@
-# sql_timing
+# FlutterSqliteComparison
 
-A new Flutter project.
+Comparing the performance of two different sqlite libraries by `INSERT`ing 10000 rows one-by-one
+and then `SELECT`ing all rows in that table.
 
-## Getting Started
+## Results
 
-This project is a starting point for a Flutter application.
+Running on a Pixel 4a, we see the following (results formatted as h:mm:ss):
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Library   | Inserting 10000 rows | SELECTing 10000 rows |
+| :---      |    :----:           |  ---:                |
+| sqlite3   | 0:00:44.044629       | 0:00:00.032467       |
+| sqflite   | 0:05:33.144242       | 0:00:00.133296       |
